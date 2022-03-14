@@ -1,0 +1,53 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.devh.equip'
+version = 'v1'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation ('org.springframework.boot:spring-boot-starter-data-jpa') {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+    implementation ('org.springframework.boot:spring-boot-starter-web') {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation ('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+
+    implementation 'org.apache.commons:commons-lang3'
+    /* Json */
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+
+    /* Log4j2 */
+    implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
+    implementation 'org.apache.logging.log4j:log4j-api:2.17.1'
+    implementation 'org.apache.logging.log4j:log4j-web:2.17.1'
+    implementation ('org.apache.logging.log4j:log4j-slf4j-impl:2.17.1')
+    /* Embedded Tomcat Log */
+    implementation ('org.slf4j:jul-to-slf4j:1.7.33') {
+        exclude group: 'org.slf4j', module: 'slf4j-api'
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

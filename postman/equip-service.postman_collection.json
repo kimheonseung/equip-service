@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "1aa980f2-6ac7-4a08-a147-c9135c1edc8c",
+		"name": "equip-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[GET] equip-type/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8003/equip-type/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"equip-type",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] equip-type/code/{code}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8003/equip-type/code/SERVER",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"equip-type",
+						"code",
+						"SERVER"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] equip-type/name/{name}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8003/equip-type/name/서버",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"equip-type",
+						"name",
+						"서버"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[POST] equip-type/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"CD\",\n    \"name\": \"NM\",\n    \"description\": \"ds\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8003/equip-type/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"equip-type",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
