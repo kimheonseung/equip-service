@@ -10,6 +10,7 @@ public class EquipVO {
     private String ip;
     private String name;
     private String equipTypeCode;
+    private String os;
     private Boolean enable;
     private Long parentId;
     private Long equipGroupId;

@@ -25,7 +25,7 @@ public class Equip {
     @Column(length = 30, nullable = false, unique = true)
     private String name;
     @ManyToOne
-    @JoinColumn(name = "EQUIP_TYPE_CODE", foreignKey = @ForeignKey(name = "FK_EQUIP_EQUIP_TYPE"))
+    @JoinColumn(referencedColumnName = "CODE", name = "EQUIP_TYPE_CODE", foreignKey = @ForeignKey(name = "FK_EQUIP_EQUIP_TYPE"))
     private EquipType equipType;
     @Column(length = 100, nullable = false)
     private String os;
