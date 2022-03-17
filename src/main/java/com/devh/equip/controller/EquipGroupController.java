@@ -1,10 +1,10 @@
 package com.devh.equip.controller;
 
-import com.devh.common.api.constant.ApiStatus;
-import com.devh.common.api.response.ApiResponse;
-import com.devh.common.api.vo.TreeVO;
 import com.devh.equip.service.EquipGroupService;
 import com.devh.equip.vo.EquipGroupVO;
+import com.devh.module.api.constant.ApiStatus;
+import com.devh.module.api.response.ApiResponse;
+import com.devh.module.api.vo.TreeVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

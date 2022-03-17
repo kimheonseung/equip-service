@@ -1,9 +1,9 @@
 package com.devh.equip.controller;
 
-import com.devh.common.api.constant.ApiStatus;
-import com.devh.common.api.response.ApiResponse;
 import com.devh.equip.service.EquipTypeService;
 import com.devh.equip.vo.EquipTypeVO;
+import com.devh.module.api.constant.ApiStatus;
+import com.devh.module.api.response.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

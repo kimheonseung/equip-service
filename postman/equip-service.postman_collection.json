@@ -6,20 +6,44 @@
 	},
 	"item": [
 		{
-			"name": "[GET] equip-type/list",
+			"name": "[GET] equip/list/type/{equipTypeCode}",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8003/equip-type/list",
+					"raw": "http://localhost:8003/equip/list/type/SERVER",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8003",
 					"path": [
-						"equip-type",
-						"list"
+						"equip",
+						"list",
+						"type",
+						"SERVER"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] equip/list/group/{equipGroupId}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8003/equip/list/group/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"equip",
+						"list",
+						"group",
+						"1"
 					]
 				}
 			},
@@ -91,6 +115,126 @@
 					"path": [
 						"equip-type",
 						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] equip-group/tree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8003/equip-group/tree",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"equip-group",
+						"tree"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] equip-group/id/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8003/equip-group/id/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"equip-group",
+						"id",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] equip-group/name/{name}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8003/equip-group/name/연구소B",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"equip-group",
+						"name",
+						"연구소B"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[POST] equip-type/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"name\": \"test1\",\n    \"parentId\": 103,\n    \"description\": \"test1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8003/equip-group/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"equip-group",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[POST] equip-type/update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 408,\n    \"name\": \"test3\",\n    \"parentId\": 101,\n    \"description\": \"test1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8003/equip-group/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"equip-group",
+						"update"
 					]
 				}
 			},

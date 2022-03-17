@@ -25,17 +25,15 @@ dependencies {
     implementation ('org.springframework.boot:spring-boot-starter-web') {
         exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
     }
-    compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
-    annotationProcessor 'org.projectlombok:lombok'
     testImplementation ('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
     }
 
     implementation 'org.apache.commons:commons-lang3'
-    /* Json */
-    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
 
     /* Log4j2 */
     implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
@@ -46,6 +44,8 @@ dependencies {
     implementation ('org.slf4j:jul-to-slf4j:1.7.33') {
         exclude group: 'org.slf4j', module: 'slf4j-api'
     }
+    implementation files ('../devh-module/api-module/build/libs/api-module-v1.jar')
+    implementation files ('../devh-module/exception-module/build/libs/exception-module-v1.jar')
 }
 
 tasks.named('test') {

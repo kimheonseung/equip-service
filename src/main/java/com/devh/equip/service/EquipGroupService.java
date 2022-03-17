@@ -1,9 +1,9 @@
 package com.devh.equip.service;
 
-import com.devh.common.api.vo.TreeVO;
-import com.devh.common.exception.ServiceException;
 import com.devh.equip.entity.EquipGroup;
 import com.devh.equip.vo.EquipGroupVO;
+import com.devh.module.api.vo.TreeVO;
+import com.devh.module.exception.ServiceException;
 
 import java.util.List;
 

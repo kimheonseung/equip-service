@@ -1,10 +1,10 @@
 package com.devh.equip.service;
 
-import com.devh.common.exception.ServiceException;
 import com.devh.equip.entity.Equip;
 import com.devh.equip.entity.EquipGroup;
 import com.devh.equip.entity.EquipType;
 import com.devh.equip.vo.EquipVO;
+import com.devh.module.exception.ServiceException;
 
 import java.util.List;
 

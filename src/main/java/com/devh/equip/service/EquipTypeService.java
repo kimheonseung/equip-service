@@ -1,8 +1,8 @@
 package com.devh.equip.service;
 
-import com.devh.common.exception.ServiceException;
 import com.devh.equip.entity.EquipType;
 import com.devh.equip.vo.EquipTypeVO;
+import com.devh.module.exception.ServiceException;
 
 import java.util.List;
 

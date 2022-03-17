@@ -1,10 +1,10 @@
 package com.devh.equip.service;
 
-import com.devh.common.exception.ServiceException;
-import com.devh.common.util.ExceptionUtils;
 import com.devh.equip.entity.EquipType;
 import com.devh.equip.repository.EquipTypeRepository;
 import com.devh.equip.vo.EquipTypeVO;
+import com.devh.module.exception.ServiceException;
+import com.devh.module.exception.util.ExceptionUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
